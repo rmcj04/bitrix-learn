@@ -1,7 +1,6 @@
 <?php
 // Проверяем, загружен ли Prolog
     (!defined('B_PROLOG_INCLUDED') && B_PROLOG_INCLUDED !== true) ?? die('Core not loaded');
-    $language = \Bitrix\Landing\Manager::getLangISO();
 
     // Определяем тип для $Application, что-бы шторм не срал ошибками, и был автокомплит
     /** @var \CMain $APPLICATION */
@@ -9,7 +8,7 @@
 
 ?>
 <!doctype html>
-<html lang="<?= $language; ?>" class="<?php $APPLICATION->ShowProperty('HtmlClass') ?>">
+<html lang="en"">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
