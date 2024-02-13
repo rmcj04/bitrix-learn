@@ -6,6 +6,10 @@
     /** @var \CMain $APPLICATION */
 
 
+    use Bitrix\Main\Page\Asset;
+
+    Asset::getInstance
+
 ?>
 <!doctype html>
 <html lang="en"">
@@ -17,8 +21,6 @@
     <title><?php $APPLICATION->ShowTitle(); ?></title>
     <?php
     $APPLICATION->ShowHead();
-    $APPLICATION->ShowProperty('MetaOG');
-    $APPLICATION->ShowProperty('BeforeHeadClose');
     ?>
 </head>
 <body>
