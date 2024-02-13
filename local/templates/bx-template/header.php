@@ -5,11 +5,14 @@
     // Определяем тип для $Application, что-бы шторм не срал ошибками, и был автокомплит
     /** @var \CMain $APPLICATION */
 
-
+    // Подключение стилей и скриптов через D7
     use Bitrix\Main\Page\Asset;
 
-    Asset::getInstance
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/590.css");
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/assets/css/app.css");
 
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/js/app.js");
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/assets/js/vendor.js");
 ?>
 <!doctype html>
 <html lang="en"">
