@@ -90,7 +90,7 @@
                             "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
                             "ROOT_MENU_TYPE" => "left",	// Тип меню для первого уровня
                             "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-                            "COMPONENT_TEMPLATE" => ".default"
+                            "COMPONENT_TEMPLATE" => "menu-header"
                         ),
                             false
                         );?>
@@ -99,7 +99,23 @@
                 <div class="header-main__col right">
                     <div class="header-main__contacts">
                         <div class="header-main__contacts-col">
-                            <div class="header-main__contacts-office">Центральный офис</div><a class="header-main__contacts-tel" href="tel:+78614725800">8 (86147) 2-58-00</a><a class="header-main__contacts-mail" href="mailto:zdor_prod@mail.ru">zdor_prod@mail.ru</a>
+                            <div class="header-main__contacts-office">Центральный офис</div>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:menu",
+                                "menu-header",
+                                Array(
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "CHILD_MENU_TYPE" => "left",
+                                    "DELAY" => "N",
+                                    "MAX_LEVEL" => "1",
+                                    "MENU_CACHE_GET_VARS" => array(""),
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_TYPE" => "N",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "ROOT_MENU_TYPE" => "top",
+                                    "USE_EXT" => "N"
+                                )
+                            );?>
                         </div>
                         <div class="header-main__contacts-col right-col">
                             <div class="header-main__contacts-top"><a class="header-main__contacts-policy" href="#">Политика конфиденциальности</a></div>
