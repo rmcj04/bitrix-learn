@@ -21,7 +21,6 @@
 <div class="wrapper">
 
     <?$APPLICATION->ShowPanel()?>
-
     <? require __DIR__."/includes/header.php"; ?>
     <main class="main">
 
