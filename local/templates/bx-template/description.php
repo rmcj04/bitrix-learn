@@ -1,8 +1,8 @@
-<?php
-$arTemplate = [
+<?
+$arTemplate = array (
   'NAME' => 'BX-Template',
   'DESCRIPTION' => 'A test Bitrix template',
-  'SORT' => 0,
-  'TYPE' => ''
-];
+  'SORT' => '',
+  'TYPE' => '',
+);
 ?>
