@@ -23,5 +23,5 @@
     <?$APPLICATION->ShowPanel()?>
     <? require __DIR__."/includes/header.php"; ?>
     <main class="main">
-
+        <? require __DIR__ . "/includes/header_main_menus.php"; ?>
 		
