@@ -127,9 +127,18 @@
                                 <div class="footer-content__contacts-title">Центральный офис</div><a class="footer-content__contacts-tel" href="tel:+88614725800">8 (86147) 2-58-00</a><a class="footer-content__contacts-email" href="mailto:zdor_prod@mail.ru">zdor_prod@mail.ru</a>
                             </div>
                         </div>
-                        <div class="footer-content__subcol-bot">
-                            <p class="footer-content__cloud-copy">Сделано в <a href="https://cloudmill.ru" target="_blank">Клаудмил</a></p>
-                        </div>
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            ".default",
+                            array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => SITE_TEMPLATE_PATH."/includes/footer_copyright_inc.php",
+                                "COMPONENT_TEMPLATE" => ".default"
+                            ),
+                            false
+                        );?>
                     </div>
                 </div>
             </div>
