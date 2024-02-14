@@ -13,6 +13,7 @@ foreach($arResult as $arItem):
     <a class="header-main__navigation-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 	<?else:?>
     <a class="header-main__navigation-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+
 	<?endif?>
 	
 <?endforeach?>
