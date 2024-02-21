@@ -73,7 +73,7 @@
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => SITE_TEMPLATE_PATH."/includes/header_contacts_inc.php",
+		"PATH" => SITE_TEMPLATE_PATH."/includes/header/header_contacts_inc.php",
 		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false

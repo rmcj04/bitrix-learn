@@ -6,14 +6,6 @@
 /** @var \CMain $APPLICATION */
 
 ?>
-<div class="overlay"></div>
-</main>
 
-<?php require __DIR__."/includes/footer.php"; ?>
+<?php include "slider.php"; ?>
 
-
-</div>
-
-</body>
-
-</html>

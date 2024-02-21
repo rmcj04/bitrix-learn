@@ -10,7 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+//$this->setFrameMode(true);
 ?>
 
 <div class="main-slider container desktop-t">
@@ -19,7 +19,13 @@ $this->setFrameMode(true);
             <div class="swiper-wrapper">
                 <? foreach($arResult["ITEMS"] as $arItem): ?>
 
-                <div class="swiper-slide main-slider__slide">
+
+                    <?
+                    $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+                    $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                    ?>
+
+                <div class="swiper-slide main-slider__slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 
                     <div class="main-slider__slide-bg desktop" data-swiper-parallax="1440" data-bg-parallax>
                         <picture class="picture">
@@ -40,10 +46,14 @@ $this->setFrameMode(true);
                             </svg></div>
                         <div class="main-slider__content-title" data-swiper-parallax="-1000"><? echo $arItem["NAME"]; ?></div>
                         <div class="main-slider__content-desk" data-swiper-parallax="-2000"><? echo $arItem["PREVIEW_TEXT"]; ?></div>
-                        <div class="main-slider__content-bot" data-swiper-parallax="-2500"><a class="main-slider__content-button btn-hover_parent" href="#">
+                        <?php if(isset($arItem['LINK'])) : ?>
+                        <div class="main-slider__content-bot" data-swiper-parallax="-2500">
+                            <a class="main-slider__content-button btn-hover_parent" href="#">
                                 <div class="btn-hover_circle white"></div>
                                 <p>Подробнее</p>
-                            </a></div>
+                            </a>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <? endforeach; ?>

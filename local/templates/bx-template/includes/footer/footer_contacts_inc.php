@@ -12,7 +12,7 @@
 			<div class="footer-content__contacts-title">
 				 Центральный офис
 			</div>
- <a class="footer-content__contacts-tel" href="tel:+88614725800">8 (86147) 2-58-00</a><a href="mailto:zdor_prod@mail.xyz" class="footer-content__contacts-email">zdor_prod@mail.xyz</a>
+ <a class="footer-content__contacts-tel" href="tel:+88614725800">8 (86147) 2-58-00</a><a href="../../../../../bitrix/urlrewrite.php" class="footer-content__contacts-email">zdor_prod@mail.xyz</a>
 		</div>
 	</div>
 </div>

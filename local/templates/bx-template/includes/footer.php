@@ -75,7 +75,7 @@
                         "AREA_FILE_SHOW" => "file",
                         "AREA_FILE_SUFFIX" => "inc",
                         "EDIT_TEMPLATE" => "",
-                        "PATH" => SITE_TEMPLATE_PATH."/includes/footer_company_copyright_inc.php",
+                        "PATH" => SITE_TEMPLATE_PATH."/includes/footer/footer_company_copyright_inc.php",
                         "COMPONENT_TEMPLATE" => ".default"
                     ),
                     false
@@ -104,7 +104,7 @@
                                 "AREA_FILE_SHOW" => "file",
                                 "AREA_FILE_SUFFIX" => "inc",
                                 "EDIT_TEMPLATE" => "",
-                                "PATH" => SITE_TEMPLATE_PATH."/includes/footer_tos_inc.php",
+                                "PATH" => SITE_TEMPLATE_PATH."/includes/footer/footer_tos_inc.php",
                                 "COMPONENT_TEMPLATE" => ".default"
                             ),
                             false
@@ -134,7 +134,7 @@
                             "AREA_FILE_SHOW" => "file",
                             "AREA_FILE_SUFFIX" => "inc",
                             "EDIT_TEMPLATE" => "",
-                            "PATH" => SITE_TEMPLATE_PATH."/includes/footer_contacts_inc.php",
+                            "PATH" => SITE_TEMPLATE_PATH."/includes/footer/footer_contacts_inc.php",
                             "COMPONENT_TEMPLATE" => ".default"
                         ),
                         false
@@ -146,7 +146,7 @@
                                 "AREA_FILE_SHOW" => "file",
                                 "AREA_FILE_SUFFIX" => "inc",
                                 "EDIT_TEMPLATE" => "",
-                                "PATH" => SITE_TEMPLATE_PATH."/includes/footer_copyright_inc.php",
+                                "PATH" => SITE_TEMPLATE_PATH."/includes/footer/footer_copyright_inc.php",
                                 "COMPONENT_TEMPLATE" => ".default"
                             ),
                             false
