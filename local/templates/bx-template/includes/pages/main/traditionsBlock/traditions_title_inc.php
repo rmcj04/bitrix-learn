@@ -6,9 +6,4 @@
 /** @var \CMain $APPLICATION */
 
 ?>
-
-<?php include 'slider.php'; ?>
-
-<?php include 'catalog.php'; ?>
-
-<?php include 'traditionsBlock.php'; ?>
+<h3 class="main-traditions__title animation-title" data-splitting="" data-effect1="">сплав традиций и инноваций</h3>

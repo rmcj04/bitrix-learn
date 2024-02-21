@@ -7,8 +7,4 @@
 
 ?>
 
-<?php include 'slider.php'; ?>
-
-<?php include 'catalog.php'; ?>
-
-<?php include 'traditionsBlock.php'; ?>
+<div class="main-traditions__text">Производим и дистрибуцируем продукцию с&nbsp;1996&nbsp;года.</div>
