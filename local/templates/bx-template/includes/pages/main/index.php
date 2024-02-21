@@ -7,5 +7,6 @@
 
 ?>
 
-<?php include "slider.php"; ?>
+<?php include 'slider.php'; ?>
 
+<?php include 'catalog.php'; ?>
