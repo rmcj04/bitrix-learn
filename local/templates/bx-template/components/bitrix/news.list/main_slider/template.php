@@ -17,7 +17,8 @@
     <div class="main-slider__wrapper">
         <div class="swiper main-swiper">
             <div class="swiper-wrapper">
-                <? foreach($arResult["ITEMS"] as $arItem): ?>
+                <?php //dd($arResult['ITEMS']); ?>
+                <? foreach($arResult['ITEMS'] as $arItem): ?>
 
 
                     <?
@@ -46,9 +47,9 @@
                             </svg></div>
                         <div class="main-slider__content-title" data-swiper-parallax="-1000"><? echo $arItem["NAME"]; ?></div>
                         <div class="main-slider__content-desk" data-swiper-parallax="-2000"><? echo $arItem["PREVIEW_TEXT"]; ?></div>
-                        <?php if(isset($arItem['LINK'])) : ?>
+                        <?php if(strlen($arItem['PROPERTIES']['LINK']['VALUE']) > 0) : ?>
                         <div class="main-slider__content-bot" data-swiper-parallax="-2500">
-                            <a class="main-slider__content-button btn-hover_parent" href="#">
+                            <a class="main-slider__content-button btn-hover_parent" href="<?= $arItem['PROPERTIES']['LINK']['VALUE']; ?>">
                                 <div class="btn-hover_circle white"></div>
                                 <p>Подробнее</p>
                             </a>
