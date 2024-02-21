@@ -6,11 +6,4 @@
 /** @var \CMain $APPLICATION */
 
 ?>
-
-<?php include 'slider.php'; ?>
-
-<?php include 'catalog.php'; ?>
-
-<?php include 'traditionsBlock.php'; ?>
-
-<?php include 'filials.php'; ?>
+<h2 class="main-filials__landscape-title animation-title" data-splitting="" data-effect1="">развитая сбытовая сеть из 10 филиалов</h2>
