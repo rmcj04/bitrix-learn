@@ -4,6 +4,7 @@
 
 <header class="header">
     <div class="header-wrapper">
+
         <div class="header-row">
             <div class="header-col left">
                 <div class="header-buttons">
@@ -65,7 +66,23 @@
                     </svg></a></div>
             <div class="header-col right">
                 <div class="header-col__subrow">
-                    <nav class="header-nav"><a class="header-nav__item" href="#">Партнерам</a><a class="header-nav__item" href="#"> Где купить</a><a class="header-nav__item" href="#"> Контакты</a></nav>
+
+                    <?$APPLICATION->IncludeComponent("bitrix:menu", "menu-header-right", Array(
+                        "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+                        "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+                        "DELAY" => "N",	// Откладывать выполнение шаблона меню
+                        "MAX_LEVEL" => "1",	// Уровень вложенности меню
+                        "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+                        "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+                        "MENU_CACHE_TYPE" => "N",	// Тип кеширования
+                        "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+                        "ROOT_MENU_TYPE" => "left",	// Тип меню для первого уровня
+                        "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        "COMPONENT_TEMPLATE" => "menu-header-right"
+                    ),
+                        false
+                    );?>
+
                     <? $APPLICATION->IncludeComponent(
 	"bitrix:main.include", 
 	".default", 
@@ -81,7 +98,11 @@
 
                     </div>
                 </div>
+
+
             </div>
+
+
+
         </div>
-    </div>
 </header>
