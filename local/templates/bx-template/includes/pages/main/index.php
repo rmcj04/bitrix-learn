@@ -14,3 +14,5 @@
 <?php include 'traditionsBlock.php'; ?>
 
 <?php include 'filials.php'; ?>
+
+<?php include 'news.php'; ?>
