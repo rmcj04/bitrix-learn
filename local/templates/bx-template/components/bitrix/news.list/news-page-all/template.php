@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+    <div class="news-content__listing" data-aos="fade-up">
     <?foreach($arResult['ITEMS'] as $arItem):?>
         <?
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -34,3 +34,4 @@ $this->setFrameMode(true);
         </div>
     </a>
     <? endforeach; ?>
+    </div>
