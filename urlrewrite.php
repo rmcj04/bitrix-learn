@@ -1,6 +1,5 @@
 <?php
 $arUrlRewrite=array (
-  0 => 
   array (
     'CONDITION' => '#^/rest/#',
     'RULE' => '',
@@ -8,12 +7,16 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
-  1 => 
+    array (
+        'CONDITION' => '#^/news/([\w-]+)/([\w-]+)?#',
+        'RULE' => "ELEMENT_CODE=$2",
+        'PATH' => '/news/index.php',
+        'SORT' => 3
+    ),
   array (
-    'CONDITION' => '#^/news/#',
-    'RULE' => '',
-    'ID' => 'bitrix:news',
+    'CONDITION' => '#^/news/([\w-]+)/#',
+    'RULE' => "SECTION_CODE=$1",
     'PATH' => '/news/index.php',
-    'SORT' => 100,
+      'SORT' => 3
   ),
 );

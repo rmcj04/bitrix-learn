@@ -13,7 +13,15 @@
         <?php require_once 'breadcrumbs.php'; ?>
         <?php require_once 'title.php'; ?>
         <?php require_once 'categories.php';?>
-        <?php require_once 'listing.php'; ?>
+        <?php
+
+            if(isset($_GET['ELEMENT_CODE'])){
+                require_once 'detail.php';
+            } else {
+                require_once 'listing.php';
+            }
+
+        ?>
     </section>
 </section>
 

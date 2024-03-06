@@ -6,4 +6,4 @@
 /** @var \CMain $APPLICATION */
 
 ?>
-<h3 class="main-traditions__title animation-title" data-splitting="" data-effect1="">сплав традиций и инноваций</h3>
+<h3 class="main-traditions__title animation-title" data-splitting="" data-effect1="">Сплав традиций и инноваций</h3>
