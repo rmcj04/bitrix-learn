@@ -33,7 +33,7 @@ $this->setFrameMode(true);
     </div>
     <div class="news-detail__time">
         <div class="news-detail__date"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></div>
-        <div class="news-detail__plug">новости компании</div>
+        <div class="news-detail__plug"><?= $arResult['SECT_NAME']; ?></div>
     </div>
 
 
