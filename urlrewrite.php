@@ -8,7 +8,7 @@ $arUrlRewrite=array (
     'SORT' => 100,
   ),
     array (
-        'CONDITION' => '#^/news/([\w-]+)/([\w-]+)?#',
+        'CONDITION' => '#^/news/([\w-]+)/([\w-]+)/#',
         'RULE' => "ELEMENT_CODE=$2",
         'PATH' => '/news/index.php',
         'SORT' => 3
