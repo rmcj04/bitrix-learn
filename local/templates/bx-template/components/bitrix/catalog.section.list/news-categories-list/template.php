@@ -18,16 +18,13 @@ $strTitle = "";
 
 <div class="news-content__categories" data-aos="fade-up">
     <div class="news-content__categories-wrapper">
-        <?php
-            if(count($arResult['SECTIONS']) > 1): ?>
                 <a
-                        class="news-content__categories-item active btn-hover_parent no-scale"
+                        class="news-content__categories-item <?= !$_REQUEST['SECTION_CODE'] ? 'active' : ''?> btn-hover_parent no-scale"
                         href="/news/"
                 >
                     <div class="btn-hover_circle white"></div>
                     <span>Все</span>
                 </a>
-            <?php endif; ?>
 
             <?php foreach($arResult['SECTIONS'] as $arSection):
 
@@ -35,28 +32,29 @@ $strTitle = "";
                 $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], CIBlock::GetArrayByID($arSection["IBLOCK_ID"], "SECTION_DELETE"), array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM')));
         ?>
 
-            <?php if($_REQUEST['SECTION_ID']==$arSection['ID']): ?>
+            <?php if($_REQUEST['SECTION_CODE']==$arSection['CODE']): ?>
 
                 <a
                   id="<?=$this->GetEditAreaId($arSection['ID']);?>"
                   class="news-content__categories-item active btn-hover_parent no-scale"
-                  href="/news/<?= $arSection['CODE'] ?>/"
+                  href="<?= $arSection['SECTION_PAGE_URL'] ?>"
                 >
                     <div class="btn-hover_circle white"></div>
                     <span><?= $arSection['NAME']; ?></span>
                 </a>
-            <?php endif; ?>
+            <?php else: ?>
 
                 <a
                   id="<?=$this->GetEditAreaId($arSection['ID']);?>"
-                  class="news-content__categories-item active btn-hover_parent no-scale"
-                  href="/news/<?= $arSection['CODE'] ?>/"
+                  class="news-content__categories-item btn-hover_parent no-scale"
+                  href="<?= $arSection['SECTION_PAGE_URL'] ?>"
                 >
 
                   <div class="btn-hover_circle white"></div>
                   <span><?= $arSection['NAME']; ?></span>
 
                 </a>
+        <?php endif; ?>
 
         <?php
             endforeach;

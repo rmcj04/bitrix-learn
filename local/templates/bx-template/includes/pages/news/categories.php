@@ -24,7 +24,7 @@
 			0 => "",
 			1 => "",
 		),
-		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_ID" => '',	// ID раздела
 		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
 		"SECTION_USER_FIELDS" => array(	// Свойства разделов
 			0 => "",
